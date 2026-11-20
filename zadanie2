@@ -1,0 +1,9 @@
+def strip_comments(s, marker="#"):
+  lines = s.split("\n")
+  result = []
+  for line in lines:
+    pos = line.find(marker)
+    if pos != -1:
+      line = line[:pos]
+    result.append(line)
+  return "\n".join(result)
